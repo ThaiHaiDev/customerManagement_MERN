@@ -48,4 +48,7 @@ app.get('/', (req, res) => {
 	console.log(req.query);
 	return res.send(JSON.stringify(req.query));
 });
-http.createServer(app).listen(port, '0.0.0.0');
+app.listen(port, ()=>{
+	console.log("app is running");
+};
+//http.createServer(app).listen(port, '0.0.0.0');
